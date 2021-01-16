@@ -1,0 +1,22 @@
+version: '2'
+services:
+  serv:
+    image: server
+    ports:
+      - "8080:8080"
+      - "8443:8443"
+    volumes:
+      - ./ssl:/usr/local/tomcat/ssl
+      - ./server.xml:/usr/local/tomcat/conf/server.xml
+  web:
+    image: webapp
+    ports:
+      - "8081:8080"
+      - "8444:8443"
+    volumes:
+      - ./ssl:/usr/local/tomcat/ssl
+      - ./server.xml:/usr/local/tomcat/conf/server.xml
+networks:
+  default:
+    external:
+      name: my-net

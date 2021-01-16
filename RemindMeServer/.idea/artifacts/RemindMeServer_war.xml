@@ -1,0 +1,14 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="RemindMeServer:war">
+    <output-path>$PROJECT_DIR$/target</output-path>
+    <properties id="maven-jee-properties">
+      <options>
+        <module>RemindMeServer</module>
+        <packaging>war</packaging>
+      </options>
+    </properties>
+    <root id="archive" name="Server-1.0-SNAPSHOT.war">
+      <element id="artifact" artifact-name="RemindMeServer:war exploded" />
+    </root>
+  </artifact>
+</component>

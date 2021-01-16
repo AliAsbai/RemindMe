@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_main">
+
+    <ImageView
+        android:id="@+id/main_location_image"
+        android:layout_width="221dp"
+        android:layout_height="210dp"
+        android:src="@drawable/ic_location"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.25"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/main_createreminder_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="addAlert"
+        android:text="@string/create_reminder"
+        app:backgroundTint="#30AFBF"
+        app:layout_constraintBottom_toTopOf="@+id/main_myreminders_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/main_location_image"
+        app:layout_constraintTop_toTopOf="@+id/main_location_image"
+        app:layout_constraintVertical_bias="0.235" />
+
+    <Button
+        android:id="@+id/main_myreminders_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:onClick="goToMyReminders"
+        android:text="@string/my_reminders"
+        app:backgroundTint="#3595A1"
+        app:layout_constraintBottom_toTopOf="@+id/main_myfavorites_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/main_location_image" />
+
+    <Button
+        android:id="@+id/main_myfavorites_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="goToMyFavorites"
+        android:text="@string/my_favorites"
+        app:backgroundTint="#3595A1"
+        app:layout_constraintBottom_toBottomOf="@+id/main_location_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/main_location_image" />
+
+    <ImageButton
+        android:id="@+id/main_button_login"
+        android:layout_width="52dp"
+        android:layout_height="54dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:background="#3595A1"
+        android:onClick="login"
+        android:src="@drawable/ic_login"
+        android:tint="#02343A"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/main_welcome_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/Time"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_gravity="top"
+    android:padding="6dp">
+
+
+    <ImageView
+        android:id="@+id/location_image_view"
+        android:layout_width="53dp"
+        android:layout_height="41dp"
+        android:layout_marginTop="4dp"
+        android:src="@drawable/ic_location_on"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/location_chosen"
+        android:layout_width="185dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:hint="Chose Location"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/location_image_view"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.476" />
+
+
+    <ImageButton
+        android:id="@+id/location_chose_map"
+        android:layout_width="51dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="36dp"
+        android:layout_marginLeft="36dp"
+        android:onClick="choseFromMap"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/location_chosen"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.714"
+        android:src="@drawable/ic_location" />
+
+    <ImageButton
+        android:id="@+id/location_remove"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_marginEnd="8dp"
+        android:layout_marginRight="8dp"
+        android:onClick="removePlace"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.333"
+        app:layout_constraintStart_toEndOf="@+id/location_chose_map"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@android:drawable/ic_delete" />
+
+    <TextView
+        android:id="@+id/textview_nrOfResults"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(9)"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="@+id/location_chosen"
+        app:layout_constraintStart_toEndOf="@+id/location_chosen"
+        app:layout_constraintTop_toTopOf="@+id/location_chosen" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

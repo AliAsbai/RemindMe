@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activities.addFavoritesActivity">
+
+    <EditText
+        android:id="@+id/favouriteName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Name..."
+        android:layout_weight="0" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/favouriteLocations"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_weight="0" >
+
+        <Button
+            android:id="@+id/addLocationButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="36dp"
+            android:background="#00FFFFFF"
+            android:onClick="addLocation"
+            android:text="Add a location"
+            android:textColor="#1140B5"
+            app:backgroundTint="#FFFFFF" />
+
+        <Button
+            android:id="@+id/favouriteSubmitButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit" />
+
+    </LinearLayout>
+
+</LinearLayout>
